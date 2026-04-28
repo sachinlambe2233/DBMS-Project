@@ -1,1 +1,1 @@
-#xyztest.unaux.com
+http://xyztest.unaux.com/
