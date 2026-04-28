@@ -1,0 +1,68 @@
+/* Dashboard CSS */
+.m1, .m2, .m3 {
+    margin: 20px 1%;
+    width: 31%;
+    float: left;
+}
+
+.m4, .m5 {
+    margin: 20px 1%;
+    width: 48%;
+    float: left;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 40px 0;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-weight: 700;
+}
+
+.m11, .m22, .m33, .m44, .m55 {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px;
+    font-size: 22px;
+    color: white !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto !important;
+    min-height: 160px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.m11:hover, .m22:hover, .m33:hover, .m44:hover, .m55:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.m11 p, .m22 p, .m33 p, .m44 p, .m55 p {
+    font-size: 48px !important;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Clearfix for dashboard elements */
+body::after {
+    content: "";
+    display: table;
+    clear: both;
+}

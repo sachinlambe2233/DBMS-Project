@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #2b5cff;
+    --primary-hover: #1e45c4;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.2);
+    --text-color: #ffffff;
+    --error-color: #ff4b4b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-image: url('../images/bg-modern.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar h1 {
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.card-wrapper {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.card-header h2 {
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.card-body {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-body {
+    min-height: 250px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.student-body label {
+    font-size: 22px;
+    color: var(--text-color);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Form Styles */
+.form-body {
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-group label {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 3px rgba(43, 92, 255, 0.5);
+    background: #ffffff;
+}
+
+.submit-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 92, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 92, 255, 0.6);
+}
+
+.login-btn {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Error Message */
+.error-msg {
+    background: rgba(255, 75, 75, 0.2);
+    color: #ffcccc;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 75, 75, 0.3);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .card-wrapper {
+        width: 100%;
+    }
+    
+    .navbar h1 {
+        font-size: 28px;
+    }
+}
